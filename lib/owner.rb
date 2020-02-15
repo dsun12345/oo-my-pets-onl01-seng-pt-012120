@@ -1,5 +1,6 @@
 class Owner
   attr_reader :name, :species
+  attr_accessor :cat
  
   @@all = []
  
@@ -27,4 +28,9 @@ class Owner
   def self.reset_all 
     @@all.clear 
   end 
+  
+  def cats 
+    self.Cat.all 
+  end 
+  
 end
