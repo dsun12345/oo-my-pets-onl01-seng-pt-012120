@@ -30,7 +30,18 @@ class Owner
   end 
   
   def cats 
-    self.Cat.all 
+    Cat.all.select do |cat| 
+      cat.owner == self 
+    end 
   end 
   
+  def dogs 
+    Dog.all.select do |dog|
+      dog.owner == self 
+    end 
+  end 
+  
+  def buy_cat
+    
+  end 
 end
