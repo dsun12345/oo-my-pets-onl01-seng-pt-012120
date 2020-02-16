@@ -41,7 +41,24 @@ class Owner
     end 
   end 
   
-  def buy_cat(name)
+  def buy_cat(cat_name)
+    cat = Cat.new(cat_name, self)
+  end
+  
+  def buy_dog(dog_name)
+    dog = Dog.new(dog_name, self)
+  end 
+  
+  def walk_dogs
+    self.dogs.each {|dog| dog.mood = "happy"}
+  end 
+  
+  def feed_cats
+    self.cats.each {|cat| cat.mood = "happy"}
+  end 
+  
+  def sell_pets
     
   end 
+  
 end
